@@ -75,6 +75,11 @@ covid <- read.csv(file = "./data/owid-covid-data.csv", head = TRUE)
 El siguiente *chunk* está destinado a tomar el subconjunto de datos que nos interesa representar y poner el nombre adecuado a las variables.
 
 ```{r}
+# Tomamos el subconjunto deseado
+locations <- covid[covid$location %in% c("United States", "Italy", "France", "Germany", "Canada", "Japan", "United Kingdom"), c("location", "date", "new_deaths_smoothed_per_million")]
+
+# Cambiamos el nombre de las variables
+colnames(locations) <- c("Location", "Date", "Deaths")
 
 ```
 
