@@ -43,6 +43,24 @@ Este documento está destinado a documentar el proceso de generación de la repr
 
 Este *chunk* está destinado a cargar e instalar las librerías necesarias para la ejecución del código.
 
+```{r}
+packages = c("tidyverse","knitr", "plotly")
+
+#use this function to check if each package is on the local machine
+#if a package is installed, it will be loaded
+#if any are not, the missing package(s) will be installed and loaded
+package.check <- lapply(packages, FUN = function(x) {
+  if (!require(x, character.only = TRUE)) {
+    install.packages(x, dependencies = TRUE,repos='http://cran.rediris.es')
+  }
+  library(x, character.only = TRUE)
+})
+
+#verify they are loaded
+search()
+
+```
+
 # Importación
 
 El siguiente *chunk* importa el fichero de los datos desde la ruta local.
