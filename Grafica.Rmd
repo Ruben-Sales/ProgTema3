@@ -89,4 +89,36 @@ Este último *chunk* contiene el código del gráfico.
 
 ```{r, out.width='25%', fig.align='center', fig.cap='...'}
 
+grafico_covid <- locations %>%
+  ggplot(aes(x = Date, y = Deaths, group = Location)) + 
+    geom_line(aes(color = Location)) +
+    labs(title = "Daily new confirmed COVID-19 deaths per million people",
+         x = "Date",
+         y = "Deaths",
+         color = "Location") +
+    theme(
+      axis.text.x = element_blank(),
+      axis.text.y = element_blank(),
+      axis.ticks = element_blank())
+
+# Fuente del gráfico
+font = list(
+  family = "DM Sans",
+  size = 15,
+  color = "white"
+)
+
+# Configuración de la etiqueta
+label = list(
+  bgcolor = "#232F34",
+  bordecolor = "transparent",
+  font = font
+)
+
+# Gráfico interactivo
+ggplotly(grafico_covid, tooltip = c("x", "y", "group")) %>%
+  style(hoverlabel = label) %>%
+  layout(font = font) %>%
+  config(displayModeBar = FALSE)
+
 ```
