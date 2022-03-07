@@ -1,0 +1,68 @@
+---
+title: "Gráfico"
+author: "Rubén Sales Castellar"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    echo: yes
+    number_sections: yes
+    theme: lumen
+    toc: yes
+  pdf_document:
+    toc: yes
+    toc_depth: 3
+  html_notebook:
+    echo: yes
+    number_sections: yes
+    toc: yes
+params:
+  lang: es-ES
+subtitle: Tratamiento de Datos. Grado en Ciencia de Datos- UV
+language:
+  label:
+    fig: 'Figura '
+    tab: 'Tabla '
+    eq: 'Ecuación '
+    thm: 'Teorema '
+    lem: 'Lema '
+    def: 'Definición '
+    cor: 'Corolario '
+    prp: 'Proposición '
+    exm: 'Ejemplo '
+    exr: 'Ejercicio '
+    proof: 'Demostración. '
+    remark: 'Nota: '
+    solution: 'Solución. '
+---
+
+# Introducción
+
+Este documento está destinado a documentar el proceso de generación de la representación gráfica de los datos de muertes por millón de habitantes del *COVID-19* proporcionados para diferentes paises.
+
+# Instalación de Librerías
+
+Este *chunk* está destinado a cargar e instalar las librerías necesarias para la ejecución del código.
+
+# Importación
+
+El siguiente *chunk* importa el fichero de los datos desde la ruta local.
+
+```{r}
+
+```
+
+# Preparación de los datos
+
+El siguiente *chunk* está destinado a tomar el subconjunto de datos que nos interesa representar y poner el nombre adecuado a las variables.
+
+```{r}
+
+```
+
+# Gráfico
+
+Este último *chunk* contiene el código del gráfico.
+
+```{r, out.width='25%', fig.align='center', fig.cap='...'}
+
+```
