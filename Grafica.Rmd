@@ -66,6 +66,7 @@ search()
 El siguiente *chunk* importa el fichero de los datos desde la ruta local.
 
 ```{r}
+covid <- read.csv(file = "./data/owid-covid-data.csv", head = TRUE)
 
 ```
 
